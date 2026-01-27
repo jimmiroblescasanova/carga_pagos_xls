@@ -3,11 +3,10 @@ from __future__ import annotations
 from configparser import ConfigParser
 from pathlib import Path
 import sys
+from utils import obtener_ruta_base
 
-
-BASE_DIR = Path(__file__).resolve().parent
+BASE_DIR = Path(obtener_ruta_base())
 CONFIG_INI_PATH = BASE_DIR / "config.ini"
-
 
 def _load_config() -> ConfigParser:
     """Carga config.ini. Si no existe o faltan claves, lanza error."""
