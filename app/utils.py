@@ -15,7 +15,11 @@ def obtener_ruta_base():
         return os.path.dirname(sys.executable)
     else:
         # Script .py
-        return os.path.dirname(os.path.abspath(__file__))
+        script_dir = Path(os.path.abspath(__file__)).parent
+        parent_dir = script_dir.parent
+        if (parent_dir / "config.ini").exists():
+            return str(parent_dir)
+        return str(script_dir)
 
 
 BASE_DIR = Path(obtener_ruta_base())

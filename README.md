@@ -4,7 +4,7 @@ Esta herramienta carga pagos masivos desde un archivo Excel y los aplica a factu
 
 ## Configuración
 
-El archivo `config.ini` debe estar en la misma carpeta donde se ejecuta el script o el `.exe` (se detecta automáticamente con `utils.obtener_ruta_base`). Puedes usar `config.example.ini` como base.
+El archivo `config.ini` debe estar en la misma carpeta donde se ejecuta el script o el `.exe` (se detecta automáticamente con `utils.obtener_ruta_base`). En modo desarrollo, puedes dejarlo en la raíz del proyecto. Puedes usar `config.example.ini` como base.
 
 ### Sección `[database]`
 - **server:** nombre o IP del servidor SQL Server.
@@ -55,3 +55,14 @@ Notas adicionales:
 
 ## Licencia
 Proyecto bajo Licencia MIT. Ver [LICENSE.md](LICENSE.md).
+
+## Estructura del proyecto
+Estructura simple recomendada:
+- `app/`: código fuente (main y módulos).
+- `data/`: archivos de ejemplo (por ejemplo `ejemplo.xlsx`).
+- `config.ini`: configuración activa (en raíz del proyecto o junto al `.exe`).
+- `config.example.ini`: plantilla de configuración.
+- `main.spec`: configuración de PyInstaller.
+
+Ejecución en desarrollo:
+- `python app/main.py`
