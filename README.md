@@ -53,19 +53,12 @@ Notas adicionales:
 - El pago se considera duplicado si ya existe combinación de `CSERIEDOCUMENTO`, `CFOLIO` y `CIDCONCEPTODOCUMENTO` en `admDocumentos`.
 - Se actualiza el saldo pendiente de la factura (`CPENDIENTE = CPENDIENTE - importe`).
 
-## Licencia
-Proyecto bajo Licencia MIT. Ver [LICENSE.md](LICENSE.md).
-
-## Estructura del proyecto
-Estructura simple recomendada:
-- `app/`: código fuente (main y módulos).
-- `data/`: archivos de ejemplo (por ejemplo `ejemplo.xlsx`).
-- `config.ini`: configuración activa (en raíz del proyecto o junto al `.exe`).
-- `config.example.ini`: plantilla de configuración.
-- `main.spec`: configuración de PyInstaller.
-
+## Ejecución 
 Ejecución en desarrollo:
 - `python app/main.py`
 
 Compilación (PyInstaller):
 - Ejecuta desde la raíz: `pyinstaller --noconfirm --clean --workpath .\build --distpath .\dist main.spec`
+
+## Licencia
+Proyecto bajo Licencia MIT. Ver [LICENSE.md](LICENSE.md).
