@@ -117,13 +117,15 @@ if __name__ == "__main__":
                             actualizar_saldo_documento(id_factura, importe_pago)
                             
                             resultado = f"OK - ID Pago: {documento_creado}, ID Movimiento: {movimiento_creado}, Asociacion creada"
+                            r_excel = "Correcto"
                         except Exception as exc:
                             resultado = f"OK - ID Pago: {documento_creado}, ID Movimiento: {movimiento_creado}, Asociacion ERROR: {exc}"
+                            r_excel = "Error"
                     except Exception as exc:
                         resultado = f"Error creando movimiento: {exc}"
             
         # Escribir resultado en el Excel
-        imprime_resultado(EXCEL_FILE, SHEET_NAME, fila, resultado)
+        imprime_resultado(EXCEL_FILE, SHEET_NAME, fila, r_excel)
 
         log_line(f"Fila {fila}: {resultado}")
 
