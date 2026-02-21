@@ -1,6 +1,7 @@
 # TODO - Roadmap
 
 ## High Priority
+- [ ] Crear movimiento de utilidad o pérdida
 - [ ] Actualizar tabla admAsocCargosAbonosImp
 
 ## Medium Priority
